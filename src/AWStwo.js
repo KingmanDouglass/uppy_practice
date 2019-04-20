@@ -56,7 +56,7 @@ export default class AWStwo extends Component {
         <Dashboard //uppy dashboard component
           uppy={this.uppy}
           plugins={[
-            "GoogleDrive",
+           
           ]}
         />
       </div>

@@ -6,12 +6,14 @@ import UppyComp from './UppyComp'
 // import TryFour from './TryFour'
 // import AWS from './AWS'
 import AWStwo from './AWStwo'
+import Chat from './Chat'
 
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <Chat/>
         {/* <UppyComp/> */}
         {/* <OtherOne/> */}
         {/* <TryThree/> */}
