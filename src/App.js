@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import UppyComp from './UppyComp'
+// import OtherOne from './OtherOne'
+// import TryThree from './TryThree'
+import TryFour from './TryFour'
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <UppyComp/>
+        {/* <UppyComp/> */}
+        {/* <OtherOne/> */}
+        {/* <TryThree/> */}
+        <TryFour/>
       </div>
     );
   }

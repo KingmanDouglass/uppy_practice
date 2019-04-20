@@ -1,7 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
 const Uppy = require('@uppy/core')
 const Tus = require('@uppy/tus')
 const { DragDrop } = require('@uppy/react')
+
 
 const uppy = Uppy({
   meta: { type: 'avatar' },
@@ -11,13 +13,13 @@ const uppy = Uppy({
 
 uppy.use(Tus, { endpoint: '/upload' })
 
-uppy.on('complete', (result) => {
-  const url = result.successful[0].uploadURL
-  store.dispatch({
-    type: SET_USER_AVATAR_URL,
-    payload: { url: url }
-  })
-})
+// uppy.on('complete', (result) => {
+//     const url = result.successful[0].uploadURL
+//     store.dispatch({
+//       type: SET_USER_AVATAR_URL,
+//       payload: { url: url }
+//     })
+//   })
 
 const UppyComp = ({ currentAvatar }) => {
   return (
@@ -30,7 +32,7 @@ const UppyComp = ({ currentAvatar }) => {
             // Text to show on the droppable area.
             // `%{browse}` is replaced with a link that opens the system file selection dialog.
             dropHereOr: 'Drop here or %{browse}',
-            // Used as the label for tneed tohe link that opens the system file selection dialog.
+            // Used as the label for the link that opens the system file selection dialog.
             browse: 'browse'
           }
         }}
@@ -39,4 +41,9 @@ const UppyComp = ({ currentAvatar }) => {
   )
 }
 
-export default UppyComp;
+const mapReduxStateToProps = (reduxState) => ({
+    reduxState
+    
+    });
+
+export default connect(mapReduxStateToProps)(UppyComp);
