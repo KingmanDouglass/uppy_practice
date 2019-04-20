@@ -3,7 +3,9 @@ import './App.css';
 import UppyComp from './UppyComp'
 // import OtherOne from './OtherOne'
 // import TryThree from './TryThree'
-import TryFour from './TryFour'
+// import TryFour from './TryFour'
+// import AWS from './AWS'
+import AWStwo from './AWStwo'
 
 
 class App extends Component {
@@ -13,7 +15,9 @@ class App extends Component {
         {/* <UppyComp/> */}
         {/* <OtherOne/> */}
         {/* <TryThree/> */}
-        <TryFour/>
+        {/* <TryFour/> */}
+        {/* <AWS/> */}
+        <AWStwo/>
       </div>
     );
   }

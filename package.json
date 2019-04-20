@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@uppy/aws-s3": "^0.30.5",
+    "@uppy/companion": "^0.17.5",
     "@uppy/core": "^0.30.5",
     "@uppy/dashboard": "^0.30.5",
     "@uppy/dropbox": "^0.30.5",
