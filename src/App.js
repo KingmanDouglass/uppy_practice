@@ -1,25 +1,29 @@
 import React, { Component } from 'react';
 import './App.css';
-import UppyComp from './UppyComp'
+// import UppyComp from './UppyComp'
 // import OtherOne from './OtherOne'
 // import TryThree from './TryThree'
-// import TryFour from './TryFour'
+import TryFour from './TryFour'
 // import AWS from './AWS'
-import AWStwo from './AWStwo'
-import Chat from './Chat'
+// import AWStwo from './AWStwo'
+// import Chat from './Chat'
+// import MessageList from './MessageList'
+// import SendMessage from './SendMessage'
+
 
 
 class App extends Component {
+
   render() {
     return (
       <div className="App">
-        <Chat/>
+        {/* <Chat/> */}
         {/* <UppyComp/> */}
         {/* <OtherOne/> */}
         {/* <TryThree/> */}
-        {/* <TryFour/> */}
+        <TryFour/>
         {/* <AWS/> */}
-        <AWStwo/>
+        {/* <AWStwo/> */}
       </div>
     );
   }

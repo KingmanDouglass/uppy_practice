@@ -4,6 +4,7 @@ const React = require('react')
 const Uppy = require('@uppy/core')
 const Tus = require('@uppy/tus')
 const GoogleDrive = require('@uppy/google-drive')
+const Instagram = require('@uppy/instagram')
 const { Dashboard, DashboardModal, DragDrop, ProgressBar } = require('@uppy/react')
 // const Dashboard = require('@uppy/dashboard')
 // const Dashboard = Uppy.Dashboard
@@ -58,6 +59,7 @@ class TryFour extends React.Component {
     this.uppy = new Uppy({ id: 'uppy1', autoProceed: true, debug: true })
       .use(Tus, { endpoint: 'https://master.tus.io/files/' })
       .use(GoogleDrive, { companionUrl: 'https://companion.uppy.io' })
+      .use(Instagram, { companionUrl: 'https://companion.uppy.io/', })
 
     this.uppy2 = new Uppy({ id: 'uppy2', autoProceed: false, debug: true })
       .use(Tus, { endpoint: 'https://master.tus.io/files/' })
@@ -99,7 +101,8 @@ class TryFour extends React.Component {
           <Dashboard
             uppy={this.uppy}
             
-            plugins={['GoogleDrive']}
+            plugins={['GoogleDrive', 
+            'Instagram']}
             metaFields={[
               { id: 'name', name: 'Name', placeholder: 'File name' }
             ]}
